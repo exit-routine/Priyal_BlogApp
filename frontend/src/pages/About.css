@@ -1,0 +1,40 @@
+/* Base styles for smaller screens */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px; /* Reduce top margin for smaller screens */
+}
+
+.about-info {
+  flex: 1;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 20px;
+}
+
+.about-img-info {
+  display: block;
+  flex: auto;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+/* Styles for larger screens (min-width: 1200px) */
+@media (min-width: 800px) {
+  .about-container {
+    margin-top: 100px; /* Restore top margin for larger screens */
+  }
+
+  .about-img-info {
+    display: block; /* Change 'run-in' to 'block' */
+    width: 50%; /* Set width to 50% for a two-column layout */
+    max-width: none; /* Remove max-width for larger screens */
+    padding: 20px;
+    flex: none; /* Remove 'flex' to avoid unnecessary stretching */
+    box-sizing: border-box;
+  }
+}

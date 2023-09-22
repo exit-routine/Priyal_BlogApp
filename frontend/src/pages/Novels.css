@@ -1,0 +1,29 @@
+.novels {
+  margin: 0;
+  padding: 10px;
+  align-items: center;
+}
+
+.novel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* Adjust the minmax width as needed */
+  gap: 20px;
+  /* Adjust the gap between cards as needed */
+  justify-content: center;
+  /* Center-align the cards within the container */
+  max-width: 100%;
+  /* Ensure the container doesn't exceed the screen width */
+  overflow-x: hidden;
+}
+
+
+
+
+@media (max-width: 842px) {
+  .novel-card {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 1fr
+  }
+}
